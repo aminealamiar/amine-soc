@@ -67,6 +67,6 @@ jobs:
           cd ansible
           ansible-playbook -i inventory.ini playbooks/deploy-swarm.yml  # --vault-password-file /tmp/vault_pass
 
-      - name: Clean up vault password file
-        if: always()
-        run: rm -f /tmp/vault_pass
+    #  - name: Clean up vault password file
+    #    if: always()
+    #    run: rm -f /tmp/vault_pass
