@@ -57,10 +57,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Create vault password file
-        run: |
-          echo -n "${{ secrets.ANSIBLE_VAULT_PASSWORD }}" > /tmp/vault_pass
-          chmod 600 /tmp/vault_pass
+    #  - name: Create vault password file
+    #    run: |
+    #      echo -n "${{ secrets.ANSIBLE_VAULT_PASSWORD }}" > /tmp/vault_pass
+    #      chmod 600 /tmp/vault_pass
 
       - name: Run Ansible playbook
         run: |
