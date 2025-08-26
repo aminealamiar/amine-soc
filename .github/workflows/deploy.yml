@@ -51,7 +51,7 @@ jobs:
 #          ansible-lint playbooks/ --exclude=.ansible-lint-ignore
 
   deploy:
-    needs: lint
+    # needs: lint
     runs-on: self-hosted
     steps:
       - name: Checkout code
