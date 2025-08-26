@@ -59,7 +59,7 @@ jobs:
 
       - name: Create vault password file
         run: |
-          echo "${{ secrets.ANSIBLE_VAULT_PASSWORD }}" > /tmp/vault_pass
+          echo -n "${{ secrets.ANSIBLE_VAULT_PASSWORD }}" > /tmp/vault_pass
           chmod 600 /tmp/vault_pass
 
       - name: Run Ansible playbook
